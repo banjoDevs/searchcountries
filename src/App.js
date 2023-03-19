@@ -15,12 +15,23 @@ function App() {
         <Container>
           <h1>Countries</h1>
           <Form>
-            <Input>
+            <InputGroup>
               <Form.Control 
               onChange={(e) => setSearch(e.target.value)}
               placeholder='Search countries' />
-            </Input>
+            </InputGroup>
           </Form>
+          <div>
+            <button></button>
+          </div>
+          <Table>
+            <thead>
+
+            </thead>
+            <tbody>
+              
+            </tbody>
+          </Table>
         </Container>
     </div>
   );
