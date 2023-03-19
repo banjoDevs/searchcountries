@@ -10,7 +10,9 @@ function App() {
 const [countries, setCountries] = useState(data);
 const [search, setSearch] = useState('');
 
-
+const sortByName = () => {
+  
+}
 
   const resetCountries = () => {
     setCountries(data);
