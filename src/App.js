@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { data } from './data.js';
 
 function App() {
-
+const [search, setSearch] = useState('');
 
 
   return (
@@ -26,10 +26,24 @@ function App() {
           </div>
           <Table>
             <thead>
-
+              <th>Country Name</th>
+              <th>Region</th>
+              <th>Area</th>
             </thead>
             <tbody>
-              
+              {countries
+                .filter((item) => {
+                  return search.toLowerCase() === ''
+                    ? item
+                    : item.name.toLowerCase().includes(search);
+                })
+                .map((item, index) => (
+                  <tr key={index}>
+                    <td>{item.name}</td>
+                    <td>{item.region}</td>
+                    <td>{item.area}</td>
+                  </tr>
+                ))}
             </tbody>
           </Table>
         </Container>
