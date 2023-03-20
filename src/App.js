@@ -10,9 +10,23 @@ function App() {
 const [countries, setCountries] = useState(data);
 const [search, setSearch] = useState('');
 
-const sortByName = () => {
-  
-}
+const sortByName = (ascending) => {
+  setCountries(prevCountries => {
+    const sortedCountries = [...prevCountries].sort((a, b) => {
+      const nameA = a.name.toLowerCase();
+      const nameB = b.name.toLowerCase();
+      if (A < B) {
+        return ascending ? -1 : 1;
+      }
+      if (nameA > nameB) {
+        return ascending ? 1 : -1;
+      }
+      return 0;
+    });
+    return sortedCountries;
+  });
+};
+
 
   const resetCountries = () => {
     setCountries(data);
