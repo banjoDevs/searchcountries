@@ -4,11 +4,14 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { data } from './data.js';
 
 function App() {
 const [countries, setCountries] = useState(data);
 const [search, setSearch] = useState('');
+const [page, setPage] = useState(1);
+
 
 const sortByName = (ascending = true) => {
   setCountries(prevCountries => {
@@ -49,6 +52,7 @@ const resetCountries = () => {
   setCountries(data);
 };
 
+
 return (
   <div>
     <Container>
@@ -83,7 +87,7 @@ return (
                 ? item
                 : item.name.toLowerCase().includes(search);
             })
-            .map((item, index) => (
+            .slice(page * 10 - 10, page * 10).map((item, index) => (
               <tr key={index}>
                 <td>{item.name}</td>
                 <td>{item.region}</td>
@@ -93,6 +97,9 @@ return (
         </tbody>
       </Table>
     </Container>
+    (
+      
+    )
   </div>
 );
 }
