@@ -52,6 +52,10 @@ const resetCountries = () => {
   setCountries(data);
 };
 
+const selectPageHandler = () => {
+   setPage()
+};
+
 
 return (
   <div>
@@ -100,7 +104,7 @@ return (
     {countries.length> 0 && <div className="pagination">
         <span>↩</span>
         {[...Array(Math.ceil(countries.length / 10))].map((_, i) => {
-          return <span key={i}>{i + 1}</span>;
+          return <span onClick={()=>selectPageHandler(i + 1)} key={i}>{i + 1}</span>;
         })}
 
         <span>↪</span>
