@@ -98,7 +98,15 @@ return (
       </Table>
     </Container>
     {
-      countries.length>0 && <div className="pagination"></div>
+      countries.length>0 && <div className="pagination">
+        <span>↩</span>
+        {
+          Array(countries.length / 10)
+        }
+        <span>1</span>
+        <span>2</span>
+        <span>↪</span>
+      </div>
     }
   </div>
 );
