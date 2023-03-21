@@ -102,7 +102,7 @@ return (
       </Table>
     </Container>
     {countries.length> 0 && <div className="pagination">
-        <span onClick={() => selectPageHandler (i + 1)}>↩</span>
+        <span onClick={() => selectPageHandler(page - 1)} className={page > 1 ? "" : "pagination__disable"}>↩</span>
         {[...Array(Math.ceil(countries.length / 25))].map((_, i) => {
           return (
           <span 
@@ -112,7 +112,7 @@ return (
           </span>);
         })}
 
-        <span onClick={() => selectPageHandler (i + 1)}>↪</span>
+        <span onClick={() => selectPageHandler(page + 1)} className={page < products.length / 10 ? "" : "pagination__disable"}>↪</span>
       </div>}
   </div>
 );
