@@ -104,10 +104,12 @@ return (
     {countries.length> 0 && <div className="pagination">
         <span>↩</span>
         {[...Array(Math.ceil(countries.length / 25))].map((_, i) => {
-          return 
+          return (
           <span 
-          className={page=== i + 1 ? "pagination_selected" : ""}
-          onClick={()=>selectPageHandler(i + 1)} key={i}>{i + 1}</span>;
+          className={page === i + 1 ? "pagination_selected" : ""}
+          onClick={() => selectPageHandler (i + 1)} 
+          key={i}>{i + 1}
+          </span>);
         })}
 
         <span>↪</span>
