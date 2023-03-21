@@ -53,7 +53,9 @@ const resetCountries = () => {
 };
 
 const selectPageHandler = (selectPage) => {
+  if (selectPage >= 1 && selectPage <= countries.length / 10 && selectPage !== page) {
    setPage(selectPage);
+  }
 };
 
 

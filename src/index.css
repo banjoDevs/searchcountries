@@ -28,3 +28,7 @@ code {
   border: 1px solid blue;
   cursor: pointer;
 }
+
+.pagination_disable {
+  opacity: 0;
+}
