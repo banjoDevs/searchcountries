@@ -103,8 +103,7 @@ return (
             return <span key={i} >{i + 1}</span>;    
         })}
         <span>↪</span>
-      </div>
-    }
+      </div>}
   </div>
 );
 }
