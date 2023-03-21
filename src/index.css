@@ -19,6 +19,10 @@ code {
   justify-content: center;
 }
 
+.pagination_selected {
+  background-color: rgb(220, 220, 220);
+}
+
 .pagination > span {
   padding: 15px 20px;
   border: 1px solid blue;
