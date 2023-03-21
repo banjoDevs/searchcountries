@@ -102,7 +102,7 @@ return (
       </Table>
     </Container>
     {countries.length> 0 && <div className="pagination">
-        <span>↩</span>
+        <span onClick={() => selectPageHandler (i + 1)}>↩</span>
         {[...Array(Math.ceil(countries.length / 25))].map((_, i) => {
           return (
           <span 
@@ -112,7 +112,7 @@ return (
           </span>);
         })}
 
-        <span>↪</span>
+        <span onClick={() => selectPageHandler (i + 1)}>↪</span>
       </div>}
   </div>
 );
