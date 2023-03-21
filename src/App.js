@@ -91,7 +91,7 @@ return (
                 ? item
                 : item.name.toLowerCase().includes(search);
             })
-            .slice(page * 20 - 20, page * 20).map((item, index) => (
+            .slice(page * 25 - 25, page * 25).map((item, index) => (
               <tr key={index}>
                 <td>{item.name}</td>
                 <td>{item.region}</td>
@@ -103,7 +103,7 @@ return (
     </Container>
     {countries.length> 0 && <div className="pagination">
         <span>↩</span>
-        {[...Array(Math.ceil(countries.length / 10))].map((_, i) => {
+        {[...Array(Math.ceil(countries.length / 25))].map((_, i) => {
           return <span onClick={()=>selectPageHandler(i + 1)} key={i}>{i + 1}</span>;
         })}
 
