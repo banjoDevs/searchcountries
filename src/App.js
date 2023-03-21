@@ -52,8 +52,8 @@ const resetCountries = () => {
   setCountries(data);
 };
 
-const selectPageHandler = () => {
-   setPage()
+const selectPageHandler = (selectPage) => {
+   setPage(selectPage);
 };
 
 
